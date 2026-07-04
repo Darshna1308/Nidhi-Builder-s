@@ -1,53 +1,106 @@
-/* ===========================================
+/* =====================================================
    PROCESS SECTION
-=========================================== */
+===================================================== */
 
 .process{
-    padding:120px 8%;
+
+    position:relative;
+
     background:#F8FAFC;
+
+    padding:140px 8%;
+
+    overflow:hidden;
+
 }
+
+/* =====================================================
+   CONTAINER
+===================================================== */
 
 .processContainer{
-    max-width:1400px;
+
+    width:var(--container);
+
     margin:auto;
+
+    position:relative;
+
 }
 
-/* ===========================
-   Heading
-=========================== */
+/* =====================================================
+   SECTION HEADING
+===================================================== */
 
 .processHeading{
+
     text-align:center;
-    margin-bottom:70px;
+
+    max-width:900px;
+
+    margin:0 auto 90px;
+
 }
 
 .processHeading .sectionTag{
+
+    display:inline-block;
+
     color:#D4AF37;
-    letter-spacing:3px;
-    font-size:14px;
+
+    font-size:.92rem;
+
+    letter-spacing:4px;
+
     font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
 }
 
 .processHeading h2{
-    font-size:58px;
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
     color:#111827;
-    margin:20px 0;
-    line-height:1.1;
+
+    line-height:1.08;
+
+    font-weight:800;
+
+    margin-bottom:28px;
+
+}
+
+.processHeading h2 span{
+
+    color:#D4AF37;
+
 }
 
 .processHeading p{
-    max-width:720px;
+
+    max-width:760px;
+
     margin:auto;
+
     color:#64748B;
-    line-height:1.8;
-    font-size:18px;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
 }
 
-/* ===========================
-   Timeline
-=========================== */
+/* =====================================================
+   TIMELINE
+===================================================== */
 
 .timeline{
+
+    position:relative;
 
     display:grid;
 
@@ -55,95 +108,113 @@
 
     gap:28px;
 
-    position:relative;
+    align-items:stretch;
 
 }
 
-/* ===========================
-   Cards
-=========================== */
+/* Golden connector line */
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:62px;
+
+    left:10%;
+
+    width:80%;
+
+    height:3px;
+
+    background:linear-gradient(
+        to right,
+        #D4AF37,
+        rgba(212,175,55,.35)
+    );
+
+    z-index:0;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
 
 .timelineCard{
 
-    background:#fff;
+    position:relative;
 
-    padding:35px 25px;
+    z-index:2;
 
-    border-radius:24px;
+    background:white;
+
+    border-radius:28px;
+
+    padding:42px 30px;
 
     text-align:center;
 
-    position:relative;
+    box-shadow:
 
-    transition:.4s;
+        0 20px 45px rgba(15,23,42,.08);
 
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    border:1px solid rgba(226,232,240,.8);
+
+    transition:all .4s ease;
 
     overflow:hidden;
 
 }
 
-.timelineCard:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 25px 55px rgba(0,0,0,.15);
-
-}
-
-/* Gold line on top */
-
 .timelineCard::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-left:0;
+    top:0;
 
-top:0;
+    left:0;
 
-width:100%;
+    width:100%;
 
-height:5px;
+    height:5px;
 
-background:#D4AF37;
+    background:#D4AF37;
 
 }
 
-/* ===========================
-   Step Number
-=========================== */
+.timelineCard:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+        0 35px 80px rgba(15,23,42,.16);
+
+    border-color:rgba(212,175,55,.35);
+
+}
+
+/* =====================================================
+   STEP NUMBER
+===================================================== */
 
 .stepNumber{
 
-    font-size:42px;
+    width:64px;
 
-    font-weight:700;
+    height:64px;
 
-    color:#D4AF37;
-
-    margin-bottom:20px;
-
-}
-
-/* ===========================
-   Icon
-=========================== */
-
-.stepIcon{
-
-    width:80px;
-
-    height:80px;
-
-    margin:0 auto 25px;
-
-    background:#08111F;
-
-    color:#D4AF37;
+    margin:0 auto 28px;
 
     border-radius:50%;
+
+    background:#D4AF37;
+
+    color:#081220;
 
     display:flex;
 
@@ -151,118 +222,463 @@ background:#D4AF37;
 
     align-items:center;
 
-    transition:.35s;
+    font-size:1.35rem;
+
+    font-weight:800;
+
+    box-shadow:
+
+        0 12px 30px rgba(212,175,55,.35);
+
+}
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.stepIcon{
+
+    width:88px;
+
+    height:88px;
+
+    margin:0 auto 28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#081220;
+
+    color:#D4AF37;
+
+    transition:.45s;
 
 }
 
 .timelineCard:hover .stepIcon{
 
-transform:rotate(10deg) scale(1.08);
+    transform:rotate(-10deg) scale(1.08);
+
+    background:#0D1A2F;
 
 }
 
-/* ===========================
-   Title
-=========================== */
+/* =====================================================
+   CONTENT
+===================================================== */
 
 .timelineCard h3{
 
     color:#111827;
 
-    font-size:22px;
+    font-size:1.45rem;
+
+    font-weight:700;
 
     margin-bottom:18px;
 
-}
+    line-height:1.35;
 
-/* ===========================
-   Description
-=========================== */
+}
 
 .timelineCard p{
 
     color:#64748B;
 
-    line-height:1.8;
+    font-size:1rem;
 
-    font-size:15px;
+    line-height:1.9;
+
+    margin-bottom:28px;
 
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* =====================================================
+   FOOTER
+===================================================== */
 
-@media(max-width:1200px){
+.stepFooter{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#D4AF37;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    transition:.35s;
+
+}
+
+.timelineCard:hover .stepFooter{
+
+    gap:16px;
+
+}
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width:1400px){
 
 .timeline{
 
-grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(5,1fr);
 
-}
-
-}
-
-@media(max-width:900px){
-
-.timeline{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.processHeading h2{
-
-font-size:44px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.process{
-
-padding:90px 6%;
-
-}
-
-.timeline{
-
-grid-template-columns:1fr;
-
-}
-
-.processHeading h2{
-
-font-size:34px;
-
-}
-
-.processHeading p{
-
-font-size:16px;
+    gap:22px;
 
 }
 
 .timelineCard{
 
-padding:30px 22px;
+    padding:36px 24px;
+
+}
+
+.timelineCard h3{
+
+    font-size:1.3rem;
+
+}
+
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media(max-width:1200px){
+
+.process{
+
+    padding:120px 6%;
+
+}
+
+.timeline{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.timeline::before{
+
+    display:none;
+
+}
+
+.processHeading{
+
+    margin-bottom:70px;
+
+}
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:992px){
+
+.process{
+
+    padding:100px 6%;
+
+}
+
+.processHeading h2{
+
+    font-size:clamp(2.5rem,5vw,3.6rem);
+
+}
+
+.processHeading p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.timeline{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.timelineCard{
+
+    padding:34px 24px;
 
 }
 
 .stepNumber{
 
-font-size:34px;
+    width:58px;
+
+    height:58px;
+
+    font-size:1.2rem;
 
 }
 
 .stepIcon{
 
-width:70px;
+    width:80px;
 
-height:70px;
+    height:80px;
 
 }
+
+.timelineCard h3{
+
+    font-size:1.25rem;
+
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.process{
+
+    padding:90px 6%;
+
+}
+
+.processHeading{
+
+    margin-bottom:55px;
+
+}
+
+.processHeading .sectionTag{
+
+    letter-spacing:3px;
+
+}
+
+.processHeading h2{
+
+    font-size:2.4rem;
+
+}
+
+.timeline{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.timelineCard{
+
+    padding:32px 24px;
+
+}
+
+.stepIcon{
+
+    width:72px;
+
+    height:72px;
+
+}
+
+.stepNumber{
+
+    width:54px;
+
+    height:54px;
+
+    font-size:1.1rem;
+
+}
+
+.timelineCard p{
+
+    margin-bottom:24px;
+
+}
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+.process{
+
+    padding:80px 5%;
+
+}
+
+.processHeading{
+
+    margin-bottom:45px;
+
+}
+
+.processHeading h2{
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+}
+
+.processHeading p{
+
+    font-size:.96rem;
+
+}
+
+.timelineCard{
+
+    padding:28px 20px;
+
+    border-radius:22px;
+
+}
+
+.stepNumber{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:1rem;
+
+    margin-bottom:22px;
+
+}
+
+.stepIcon{
+
+    width:66px;
+
+    height:66px;
+
+    margin-bottom:22px;
+
+}
+
+.timelineCard h3{
+
+    font-size:1.18rem;
+
+}
+
+.timelineCard p{
+
+    font-size:.95rem;
+
+    line-height:1.75;
+
+}
+
+.stepFooter{
+
+    font-size:.9rem;
+
+}
+
+}
+
+/* =====================================================
+   EXTRA LARGE DESKTOP
+===================================================== */
+
+@media(min-width:1600px){
+
+.processContainer{
+
+    max-width:1550px;
+
+}
+
+.timeline{
+
+    gap:34px;
+
+}
+
+.timelineCard{
+
+    padding:46px 34px;
+
+}
+
+.processHeading{
+
+    margin-bottom:100px;
+
+}
+
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.timelineCard:focus-within{
+
+    outline:2px solid rgba(212,175,55,.5);
+
+    outline-offset:6px;
+
+}
+
+/* =====================================================
+   SMOOTH ANIMATION
+===================================================== */
+
+.timelineCard,
+.stepIcon,
+.stepFooter,
+.stepNumber{
+
+    transition:all .35s ease;
+
+}
+
+.timelineCard:hover .stepNumber{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 16px 40px rgba(212,175,55,.45);
+
+}
+
+.timelineCard:hover h3{
+
+    color:#D4AF37;
 
 }

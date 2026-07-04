@@ -6,6 +6,7 @@ import {
   Hammer,
   ShieldCheck,
   KeyRound,
+  ArrowRight,
 } from "lucide-react";
 
 function Process() {
@@ -14,42 +15,42 @@ function Process() {
 
     {
       number: "01",
-      icon: <ClipboardList size={38} />,
+      icon: <ClipboardList size={36} />,
       title: "Initial Consultation",
       description:
-        "We begin by understanding your vision, project requirements, budget and expectations to create a clear construction roadmap tailored to your needs.",
+        "We begin by understanding your vision, lifestyle requirements, project goals and budget to establish a clear roadmap for your dream project.",
     },
 
     {
       number: "02",
-      icon: <PencilRuler size={38} />,
-      title: "Design Coordination",
+      icon: <PencilRuler size={36} />,
+      title: "Planning & Design",
       description:
-        "If architectural planning is required, we coordinate with our trusted architectural partners to facilitate the design process before construction begins, ensuring a seamless transition to execution.",
+        "Working alongside trusted architects and design professionals, we coordinate layouts, structural planning and project specifications before construction begins.",
     },
 
     {
       number: "03",
-      icon: <Hammer size={38} />,
+      icon: <Hammer size={36} />,
       title: "Construction Execution",
       description:
-        "From foundation to finishing, our experienced team executes every stage of construction with premium materials, skilled workmanship and continuous on-site supervision.",
+        "Our experienced construction team executes every stage with precision, premium materials and continuous site supervision to ensure exceptional quality.",
     },
 
     {
       number: "04",
-      icon: <ShieldCheck size={38} />,
-      title: "Quality Assurance",
+      icon: <ShieldCheck size={36} />,
+      title: "Quality Inspection",
       description:
-        "Every phase of construction undergoes rigorous quality inspections to ensure structural strength, superior finishing, safety and long-term durability.",
+        "Every milestone undergoes detailed quality inspections, ensuring structural integrity, flawless finishes and long-term durability before approval.",
     },
 
     {
       number: "05",
-      icon: <KeyRound size={38} />,
+      icon: <KeyRound size={36} />,
       title: "Project Handover",
       description:
-        "After comprehensive quality verification, we hand over a fully completed project that is ready for occupancy and built to the highest standards of craftsmanship.",
+        "After final inspections, we deliver a beautifully completed project that is ready for occupancy and built to exceed expectations.",
     },
 
   ];
@@ -60,6 +61,8 @@ function Process() {
 
       <div className="processContainer">
 
+        {/* ================= HEADING ================= */}
+
         <motion.div
           className="processHeading"
           initial={{ opacity: 0, y: 40 }}
@@ -69,51 +72,99 @@ function Process() {
         >
 
           <span className="sectionTag">
-            OUR PROCESS
+
+            OUR CONSTRUCTION PROCESS
+
           </span>
 
           <h2>
+
             From Vision
+
             <br />
-            To Reality
+
+            <span>To Reality</span>
+
           </h2>
 
           <p>
-            Every project is executed through a structured construction
-            process focused on transparency, quality craftsmanship and
-            professional execution—from the initial consultation to the
-            final handover of your dream home.
+
+            Every successful project follows a carefully structured
+            process that prioritizes transparency, engineering
+            excellence and uncompromising craftsmanship at every stage.
+
           </p>
 
         </motion.div>
+
+        {/* ================= TIMELINE ================= */}
 
         <div className="timeline">
 
           {steps.map((step, index) => (
 
             <motion.div
-              className="timelineCard"
+
               key={index}
+
+              className="timelineCard"
+
               initial={{ opacity: 0, y: 60 }}
+
               whileInView={{ opacity: 1, y: 0 }}
+
               viewport={{ once: true }}
+
               transition={{
-                delay: index * 0.15,
                 duration: 0.6,
+                delay: index * 0.12,
               }}
+
             >
 
+              {/* STEP NUMBER */}
+
               <div className="stepNumber">
+
                 {step.number}
+
               </div>
+
+              {/* ICON */}
 
               <div className="stepIcon">
+
                 {step.icon}
+
               </div>
 
-              <h3>{step.title}</h3>
+              {/* CONTENT */}
 
-              <p>{step.description}</p>
+              <h3>
+
+                {step.title}
+
+              </h3>
+
+              <p>
+
+                {step.description}
+
+              </p>
+
+              {/* FOOTER */}
+
+              <div className="stepFooter">
+
+                <span>
+
+                  Learn More
+
+                </span>
+
+                <ArrowRight size={18} />
+
+              </div>
 
             </motion.div>
 
@@ -126,6 +177,7 @@ function Process() {
     </section>
 
   );
+
 }
 
 export default Process;

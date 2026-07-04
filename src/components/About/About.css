@@ -4,23 +4,23 @@
 
 .about{
 
-    padding:var(--section-padding) 8%;
-
     background:#ffffff;
+
+    padding:130px 8%;
 
 }
 
 .aboutContainer{
 
-    width:var(--container);
+    max-width:1450px;
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1.1fr;
 
-    gap:clamp(40px,6vw,90px);
+    gap:80px;
 
     align-items:center;
 
@@ -32,11 +32,7 @@
 
 .aboutImage{
 
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
+    text-align:center;
 
 }
 
@@ -44,47 +40,47 @@
 
     width:100%;
 
-    max-width:540px;
+    max-width:520px;
 
     border-radius:28px;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
+    object-fit:cover;
 
-    transition:.45s ease;
+    box-shadow:0 30px 70px rgba(0,0,0,.18);
+
+    transition:.45s;
 
 }
 
 .aboutImage img:hover{
 
-    transform:scale(1.02);
+    transform:scale(1.03);
 
 }
 
 .founderInfo{
 
-    margin-top:24px;
-
-    text-align:center;
+    margin-top:28px;
 
 }
 
 .founderInfo h3{
 
-    font-size:clamp(1.8rem,2.5vw,2.3rem);
+    font-family:'Manrope',sans-serif;
+
+    font-size:2rem;
 
     color:#111827;
 
-    font-family:'Cormorant Garamond',serif;
-
-    margin-bottom:6px;
+    font-weight:800;
 
 }
 
 .founderInfo p{
 
-    color:#6B7280;
+    color:#777;
 
-    font-size:var(--fs-body);
+    margin-top:8px;
 
 }
 
@@ -100,35 +96,113 @@
 
     letter-spacing:4px;
 
-    font-size:var(--fs-small);
-
     font-weight:700;
 
-    margin-bottom:16px;
+    margin-bottom:18px;
 
 }
 
 .aboutContent h2{
 
-    font-size:var(--fs-h1);
+    font-size:clamp(3rem,5vw,4.8rem);
 
-    color:#111827;
+    line-height:1.05;
 
-    line-height:1.1;
+    font-weight:800;
+
+    color:#081220;
 
     margin-bottom:28px;
 
 }
 
-.aboutContent p{
+.aboutContent h2 span{
 
-    font-size:var(--fs-body);
+    color:#D4AF37;
+
+}
+
+.aboutContent>p{
 
     color:#555;
 
-    line-height:1.9;
+    line-height:2;
 
-    margin-bottom:20px;
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.aboutHighlights{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin:45px 0;
+
+}
+
+.highlightCard{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:22px;
+
+    background:#F8FAFC;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    border:1px solid rgba(212,166,74,.12);
+
+}
+
+.highlightCard:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.highlightCard svg{
+
+    color:#D4AF37;
+
+    flex-shrink:0;
+
+}
+
+.highlightCard h4{
+
+    color:#081220;
+
+    margin-bottom:6px;
+
+    font-size:1.15rem;
+
+}
+
+.highlightCard p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:.98rem;
 
 }
 
@@ -140,27 +214,31 @@
 
     display:flex;
 
-    flex-wrap:wrap;
+    justify-content:space-between;
 
-    gap:clamp(25px,5vw,60px);
+    gap:30px;
 
-    margin-top:40px;
+    margin-top:45px;
 
 }
 
 .aboutNumbers div{
 
-    min-width:120px;
+    text-align:center;
+
+    flex:1;
 
 }
 
 .aboutNumbers h3{
 
-    font-size:clamp(2rem,3vw,3rem);
-
     color:#D4AF37;
 
-    margin-bottom:6px;
+    font-size:clamp(2.3rem,4vw,3.4rem);
+
+    font-weight:800;
+
+    margin-bottom:8px;
 
 }
 
@@ -168,21 +246,7 @@
 
     color:#666;
 
-    font-size:var(--fs-small);
-
-}
-
-/* =====================================================
-   LAPTOP
-===================================================== */
-
-@media(max-width:1100px){
-
-.aboutContainer{
-
-    gap:50px;
-
-}
+    font-size:.95rem;
 
 }
 
@@ -212,9 +276,9 @@
 
 }
 
-.aboutNumbers{
+.highlightCard{
 
-    justify-content:center;
+    text-align:left;
 
 }
 
@@ -232,21 +296,15 @@
 
 }
 
+.aboutNumbers{
+
+    flex-direction:column;
+
+}
+
 .aboutImage img{
 
     max-width:420px;
-
-}
-
-.aboutContent h2{
-
-    margin-bottom:22px;
-
-}
-
-.aboutNumbers{
-
-    gap:30px;
 
 }
 
@@ -264,25 +322,13 @@
 
 }
 
-.aboutImage img{
-
-    border-radius:20px;
-
-}
-
-.aboutNumbers{
+.highlightCard{
 
     flex-direction:column;
 
     align-items:center;
 
-    gap:22px;
-
-}
-
-.aboutNumbers div{
-
-    width:100%;
+    text-align:center;
 
 }
 

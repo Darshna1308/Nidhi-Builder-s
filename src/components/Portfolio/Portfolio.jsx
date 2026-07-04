@@ -5,6 +5,7 @@ import {
   Home,
   CheckCircle,
   Ruler,
+  ArrowRight,
 } from "lucide-react";
 
 import signatureVideo from "../../assets/videos/signature-project.mp4";
@@ -12,6 +13,30 @@ import signatureVideo from "../../assets/videos/signature-project.mp4";
 function Portfolio() {
   return (
     <section className="portfolio" id="portfolio">
+
+      {/* ================= SECTION HEADING ================= */}
+
+      <motion.div
+        className="portfolioHeading"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <span>OUR SIGNATURE PROJECT</span>
+
+        <h2>
+          Crafting Homes
+          <br />
+          <span>That Define Luxury</span>
+        </h2>
+
+        <p>
+          Every landmark begins with a vision. This signature residence
+          showcases our commitment to luxury, engineering precision,
+          premium materials and timeless architectural excellence.
+        </p>
+      </motion.div>
 
       <motion.div
         className="portfolioContainer"
@@ -26,46 +51,50 @@ function Portfolio() {
         <div className="videoSection">
 
           <video
+            className="portfolioVideo"
             src={signatureVideo}
             autoPlay
             muted
             loop
             playsInline
-            className="portfolioVideo"
           />
 
         </div>
 
-        {/* ================= INFO CARD ================= */}
+        {/* ================= GLASS CARD ================= */}
 
         <motion.div
           className="projectCard"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
         >
 
           <span className="projectLabel">
-            SIGNATURE PROJECT
+            FEATURED RESIDENCE
           </span>
 
           <h2>
-            Luxurious Residential Home
+            A Landmark Residence
+            <br />
+            Built with Excellence
           </h2>
 
           <p>
-            Built as the personal residence of our founder,
-            this home reflects the craftsmanship,
-            luxury and engineering excellence that define
+            Constructed as the founder's personal residence, this home
+            represents the highest standards of craftsmanship,
+            thoughtful planning and architectural elegance that define
             every Nidhi Builders project.
           </p>
+
+          {/* ================= INFO GRID ================= */}
 
           <div className="projectGrid">
 
             <div className="infoBox">
 
-              <MapPin size={20} />
+              <MapPin size={22} />
 
               <div>
 
@@ -79,13 +108,13 @@ function Portfolio() {
 
             <div className="infoBox">
 
-              <Home size={20} />
+              <Home size={22} />
 
               <div>
 
-                <span>Owner</span>
+                <span>Project Type</span>
 
-                <h4>Mahesh Parihar</h4>
+                <h4>Luxury Residence</h4>
 
               </div>
 
@@ -93,13 +122,13 @@ function Portfolio() {
 
             <div className="infoBox">
 
-              <Ruler size={20} />
+              <Ruler size={22} />
 
               <div>
 
-                <span>Construction Area</span>
+                <span>Built-up Area</span>
 
-                <h4>5140 sq. ft.</h4>
+                <h4>5140 Sq. Ft.</h4>
 
               </div>
 
@@ -107,19 +136,30 @@ function Portfolio() {
 
             <div className="infoBox">
 
-              <CheckCircle size={20} />
+              <CheckCircle size={22} />
 
               <div>
 
                 <span>Status</span>
 
-                <h4>Completed</h4>
+                <h4>Successfully Completed</h4>
 
               </div>
 
             </div>
 
           </div>
+
+          {/* ================= BUTTON ================= */}
+
+          <a
+            href="#contact"
+            className="portfolioBtn"
+          >
+            Start Your Dream Project
+
+            <ArrowRight size={18} />
+          </a>
 
         </motion.div>
 

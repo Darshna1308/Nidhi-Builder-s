@@ -1,64 +1,81 @@
 import "./WhyChoose.css";
 import { motion } from "framer-motion";
 import {
-  CheckCircle2,
   ShieldCheck,
   Clock3,
   BadgeIndianRupee,
   HardHat,
-  Sparkles
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
 } from "lucide-react";
 
 const features = [
   {
-    icon: <HardHat size={28} />,
+    icon: <HardHat size={34} />,
     title: "Experienced Team",
-    desc: "Highly skilled engineers, architects and construction professionals."
+    desc: "Our highly skilled engineers, architects and site professionals ensure every project is executed with precision and excellence.",
   },
+
   {
-    icon: <ShieldCheck size={28} />,
+    icon: <ShieldCheck size={34} />,
     title: "Premium Quality",
-    desc: "Top-grade materials and strict quality control at every stage."
+    desc: "We use carefully selected construction materials while maintaining strict quality standards throughout every stage.",
   },
+
   {
-    icon: <Clock3 size={28} />,
-    title: "On-Time Delivery",
-    desc: "Projects completed within committed timelines."
+    icon: <Clock3 size={34} />,
+    title: "Timely Delivery",
+    desc: "Every milestone is carefully planned to ensure projects are completed within the committed timeline.",
   },
+
   {
-    icon: <BadgeIndianRupee size={28} />,
+    icon: <BadgeIndianRupee size={34} />,
     title: "Transparent Pricing",
-    desc: "No hidden charges. Honest quotations and clear communication."
+    desc: "No hidden costs. Honest quotations, clear communication and complete financial transparency.",
   },
+
   {
-    icon: <Sparkles size={28} />,
-    title: "Modern Design",
-    desc: "Elegant architecture blended with functionality."
+    icon: <Sparkles size={34} />,
+    title: "Modern Construction",
+    desc: "Elegant architectural execution blended with functionality, durability and long-term value.",
   },
+
   {
-    icon: <CheckCircle2 size={28} />,
+    icon: <CheckCircle2 size={34} />,
     title: "Customer Satisfaction",
-    desc: "Long-term relationships built on trust and quality."
-  }
+    desc: "Building lasting relationships through trust, transparency and exceptional workmanship.",
+  },
 ];
 
 function WhyChoose() {
   return (
-    <section className="whyChoose">
+    <section className="whyChoose" id="whychoose">
 
-      <div className="whyHeading">
+      <motion.div
+        className="whyHeading"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
 
-        <span>WHY CHOOSE US</span>
+        <span>WHY CHOOSE NIDHI BUILDERS</span>
 
         <h2>
-          Why Families &
+          Building Trust
           <br />
-          Businesses Trust
-          <br />
-          Nidhi Builders
+          <span>One Project at a Time</span>
         </h2>
 
-      </div>
+        <p>
+          Every project reflects our commitment to quality,
+          engineering excellence and customer satisfaction.
+          We believe exceptional construction begins with
+          transparency, precision and lasting relationships.
+        </p>
+
+      </motion.div>
 
       <div className="whyGrid">
 
@@ -70,7 +87,10 @@ function WhyChoose() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.12 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.12,
+            }}
           >
 
             <div className="whyIcon">
@@ -80,6 +100,14 @@ function WhyChoose() {
             <h3>{item.title}</h3>
 
             <p>{item.desc}</p>
+
+            <div className="whyFooter">
+
+              <span>Learn More</span>
+
+              <ArrowRight size={18} />
+
+            </div>
 
           </motion.div>
 

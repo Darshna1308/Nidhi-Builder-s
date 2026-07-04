@@ -48,17 +48,17 @@
     position:relative;
     z-index:2;
 
-    width:var(--container);
+    width:min(92%,1450px);
 
     margin:auto;
 
-    padding:140px 0 90px;
+    padding:120px 0 90px;
 
 }
 
 .heroContent{
 
-    max-width:760px;
+    max-width:900px;
 
 }
 
@@ -88,15 +88,17 @@
 
 .heroContent h1{
 
-    font-size:var(--fs-display);
+    font-size:clamp(3.4rem,6vw,6rem);
 
-    line-height:1.05;
+    line-height:1.02;
 
-    color:#fff;
+    color:white;
 
-    font-weight:700;
+    font-weight:800;
 
-    margin-bottom:28px;
+    letter-spacing:-2px;
+
+    margin-bottom:34px;
 
 }
 
@@ -112,15 +114,15 @@
 
 .heroContent p{
 
-    color:#D6DCE7;
+    color:#d8dde6;
 
-    font-size:var(--fs-body);
+    font-size:1.15rem;
 
-    line-height:1.85;
+    line-height:1.9;
 
-    max-width:650px;
+    max-width:760px;
 
-    margin-bottom:45px;
+    margin-bottom:50px;
 
 }
 
@@ -149,21 +151,15 @@
 
     justify-content:center;
 
-    gap:10px;
+    gap:12px;
 
-    padding:16px 30px;
+    padding:18px 36px;
 
     border-radius:60px;
 
-    font-size:1rem;
+    font-size:1.02rem;
 
     font-weight:600;
-
-    text-decoration:none;
-
-    transition:.35s;
-
-    white-space:nowrap;
 
 }
 
@@ -211,7 +207,9 @@
 
     flex-wrap:wrap;
 
-    gap:45px;
+    gap:65px;
+
+    margin-top:20px;
 
 }
 
@@ -225,9 +223,11 @@
 
     color:#D4AF37;
 
-    font-size:clamp(2rem,3vw,2.7rem);
+    font-size:clamp(2.4rem,4vw,3.4rem);
 
-    margin-bottom:6px;
+    font-weight:800;
+
+    margin-bottom:8px;
 
 }
 
@@ -372,6 +372,8 @@
 .heroButtons{
 
     flex-direction:column;
+
+    align-items:flex-start;
 
 }
 

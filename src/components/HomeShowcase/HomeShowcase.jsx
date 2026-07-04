@@ -4,6 +4,7 @@ import {
   Home,
   CheckCircle,
   Sparkles,
+  ArrowRight
 } from "lucide-react";
 
 function HomeShowcase() {
@@ -27,16 +28,16 @@ function HomeShowcase() {
           </span>
 
           <h2>
-            Experience Our
+            Explore Every Corner of Our
             <br />
-            Finished Homes
+            <span>Luxury Homes</span>
           </h2>
 
           <p>
-            Step inside one of our completed residences through an immersive
-            walkthrough. Every corner reflects thoughtful planning, premium
-            craftsmanship and the uncompromising quality that defines every
-            Nidhi Builders project.
+            Experience our completed residences through an immersive virtual
+            walkthrough. Discover elegant interiors, premium materials,
+            thoughtful planning, and exceptional craftsmanship that showcase
+            the quality behind every Nidhi Builders project.
           </p>
 
           <div className="features">
@@ -57,6 +58,11 @@ function HomeShowcase() {
             </div>
 
           </div>
+
+          <a href="#portfolio" className="showcaseBtn">
+            Explore Projects
+            <ArrowRight size={18}/>
+          </a>
 
         </motion.div>
 

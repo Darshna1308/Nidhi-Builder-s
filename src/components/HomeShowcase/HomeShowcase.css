@@ -3,27 +3,17 @@
 ===================================================== */
 
 .homeShowcase{
-
     background:#081220;
-
-    padding:var(--section-padding) 8%;
-
+    padding:130px 8%;
 }
 
 .showcaseContainer{
-
-    width:var(--container);
-
+    max-width:1450px;
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:1fr 0.9fr;
-
-    gap:clamp(45px,6vw,90px);
-
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
     align-items:center;
-
 }
 
 /* =====================================================
@@ -36,37 +26,49 @@
 
     color:#D4AF37;
 
-    letter-spacing:4px;
+    letter-spacing:5px;
 
-    font-size:var(--fs-small);
+    text-transform:uppercase;
+
+    font-size:.9rem;
 
     font-weight:700;
 
-    margin-bottom:18px;
+    margin-bottom:22px;
 
 }
 
 .showcaseContent h2{
 
+    font-size:clamp(3rem,5vw,5rem);
+
+    line-height:1.05;
+
     color:white;
 
-    font-size:var(--fs-h1);
+    font-weight:800;
 
-    line-height:1.1;
+    margin-bottom:30px;
 
-    margin-bottom:25px;
+}
+
+.showcaseContent h2 span{
+
+    color:#D4AF37;
 
 }
 
 .showcaseContent p{
 
-    color:#CBD5E1;
+    color:#D6DCE7;
 
-    font-size:var(--fs-body);
+    font-size:1.08rem;
 
-    line-height:1.9;
+    line-height:2;
 
-    margin-bottom:40px;
+    max-width:700px;
+
+    margin-bottom:45px;
 
 }
 
@@ -80,7 +82,9 @@
 
     flex-direction:column;
 
-    gap:22px;
+    gap:24px;
+
+    margin-bottom:45px;
 
 }
 
@@ -90,11 +94,13 @@
 
     align-items:center;
 
-    gap:16px;
+    gap:18px;
 
     color:white;
 
-    font-size:var(--fs-body);
+    font-size:1.05rem;
+
+    font-weight:500;
 
 }
 
@@ -102,7 +108,51 @@
 
     color:#D4AF37;
 
+    background:rgba(212,175,55,.12);
+
+    padding:10px;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
     flex-shrink:0;
+
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.showcaseBtn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#D4AF37;
+
+    color:#081220;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.showcaseBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(212,175,55,.35);
 
 }
 
@@ -122,33 +172,33 @@
 
 .videoWrapper{
 
-    width:min(360px,100%);
+    width:min(420px,100%);
 
     aspect-ratio:9/18;
 
     background:#111827;
 
-    padding:14px;
+    padding:16px;
 
-    border-radius:40px;
+    border-radius:42px;
 
-    border:2px solid rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.12);
 
     overflow:hidden;
 
     position:relative;
 
-    transition:.4s;
+    transition:.45s;
 
     box-shadow:
-        0 30px 70px rgba(0,0,0,.40),
-        0 0 45px rgba(212,175,55,.12);
+        0 35px 90px rgba(0,0,0,.45),
+        0 0 60px rgba(212,175,55,.12);
 
 }
 
 .videoWrapper:hover{
 
-    transform:translateY(-8px) scale(1.02);
+    transform:translateY(-10px) scale(1.03);
 
 }
 
@@ -166,7 +216,7 @@
 
     left:50%;
 
-    top:12px;
+    top:13px;
 
     transform:translateX(-50%);
 
@@ -190,17 +240,31 @@
 
 .videoCaption{
 
-    margin-top:22px;
+    margin-top:24px;
 
     color:#CBD5E1;
 
-    font-size:var(--fs-small);
-
     text-align:center;
 
-    max-width:330px;
+    font-size:1rem;
 
     line-height:1.8;
+
+    max-width:360px;
+
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media(max-width:1200px){
+
+.showcaseContainer{
+
+    gap:60px;
+
+}
 
 }
 
@@ -216,6 +280,8 @@
 
     text-align:center;
 
+    gap:60px;
+
 }
 
 .features{
@@ -224,9 +290,21 @@
 
 }
 
-.showcaseVideo{
+.showcaseContent p{
 
-    margin-top:20px;
+    margin:auto auto 45px;
+
+}
+
+.showcaseBtn{
+
+    margin:auto;
+
+}
+
+.videoWrapper{
+
+    width:min(400px,100%);
 
 }
 
@@ -244,9 +322,31 @@
 
 }
 
+.showcaseContent h2{
+
+    font-size:clamp(2.3rem,8vw,3.5rem);
+
+}
+
+.showcaseContent p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.showcaseBtn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
 .videoWrapper{
 
-    width:320px;
+    width:330px;
 
 }
 
@@ -277,6 +377,14 @@
 .videoWrapper iframe{
 
     border-radius:22px;
+
+}
+
+.featureItem{
+
+    align-items:flex-start;
+
+    text-align:left;
 
 }
 
