@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Home from "./pages/Home";
+import Home from "./Pages/Home";
 import Preloader from "./components/Preloader/Preloader";
 
 function App() {
