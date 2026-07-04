@@ -1,53 +1,96 @@
-/* ===========================================
+/* =====================================================
    STATS SECTION
-=========================================== */
+===================================================== */
 
 .stats{
-    padding:120px 8%;
-    background:#08111F;
+
     position:relative;
+
+    background:#081220;
+
+    padding:140px 8%;
+
     overflow:hidden;
+
 }
 
 .statsContainer{
-    max-width:1400px;
+
+    width:var(--container);
+
     margin:auto;
+
 }
 
-/* ===========================
-   Heading
-=========================== */
+/* =====================================================
+   HEADING
+===================================================== */
 
 .statsHeading{
+
+    max-width:900px;
+
+    margin:0 auto 90px;
+
     text-align:center;
-    margin-bottom:70px;
+
 }
 
 .statsHeading .sectionTag{
+
+    display:inline-block;
+
     color:#D4AF37;
-    font-size:14px;
-    letter-spacing:3px;
+
+    letter-spacing:4px;
+
+    font-size:.9rem;
+
     font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
 }
 
 .statsHeading h2{
-    margin:20px 0;
-    font-size:56px;
-    line-height:1.15;
-    color:#fff;
+
+    color:#ffffff;
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
+    line-height:1.08;
+
+    font-weight:800;
+
+    margin-bottom:24px;
+
+}
+
+.statsHeading h2 span{
+
+    color:#D4AF37;
+
 }
 
 .statsHeading p{
+
     max-width:760px;
+
     margin:auto;
+
     color:#CBD5E1;
-    font-size:18px;
-    line-height:1.8;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
 }
 
-/* ===========================
-   Grid
-=========================== */
+/* =====================================================
+   GRID
+===================================================== */
 
 .statsGrid{
 
@@ -59,142 +102,483 @@
 
 }
 
-/* ===========================
-   Card
-=========================== */
+/* =====================================================
+   CARD
+===================================================== */
 
 .statCard{
 
-    background:rgba(255,255,255,.05);
+    position:relative;
 
-    border:1px solid rgba(255,255,255,.08);
+    display:flex;
 
-    border-radius:24px;
+    flex-direction:column;
 
-    backdrop-filter:blur(16px);
-
-    -webkit-backdrop-filter:blur(16px);
-
-    padding:50px 25px;
+    align-items:center;
 
     text-align:center;
 
-    transition:.4s ease;
+    padding:42px 30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:all .4s ease;
+
+}
+
+.statCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#D4AF37;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.statCard:hover::before{
+
+    transform:scaleX(1);
 
 }
 
 .statCard:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-12px);
 
-    border-color:#D4AF37;
+    border-color:rgba(212,175,55,.45);
 
-    box-shadow:0 25px 60px rgba(212,175,55,.15);
+    box-shadow:
+
+        0 30px 60px rgba(0,0,0,.35),
+
+        0 0 45px rgba(212,175,55,.12);
 
 }
 
-/* ===========================
-   Number
-=========================== */
+/* =====================================================
+   ICON
+===================================================== */
 
-.statCard h3{
+.statIcon{
 
-    font-size:64px;
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111C2F;
 
     color:#D4AF37;
 
-    margin-bottom:18px;
+    margin-bottom:28px;
+
+    transition:.4s;
+
+}
+
+.statCard:hover .statIcon{
+
+    transform:rotate(-12deg) scale(1.08);
+
+    background:#16253D;
+
+    box-shadow:
+
+        0 15px 35px rgba(212,175,55,.25);
+
+}
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.statCard h3{
+
+    font-size:clamp(3rem,4vw,4.2rem);
+
+    color:#D4AF37;
+
+    font-weight:800;
+
+    line-height:1;
+
+    margin-bottom:14px;
+
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.statCard h4{
+
+    color:#FFFFFF;
+
+    font-size:1.45rem;
 
     font-weight:700;
 
-}
+    line-height:1.3;
 
-/* ===========================
-   Text
-=========================== */
+    margin-bottom:18px;
+
+}
 
 .statCard p{
 
-    color:#E2E8F0;
+    color:#CBD5E1;
 
-    font-size:18px;
+    font-size:1rem;
 
-    line-height:1.6;
+    line-height:1.8;
+
+    flex:1;
 
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
 
-@media(max-width:1100px){
+.stats::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:radial-gradient(
+        rgba(212,175,55,.08),
+        transparent 70%
+    );
+
+    top:-180px;
+
+    right:-120px;
+
+    pointer-events:none;
+
+}
+
+.stats::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    background:radial-gradient(
+        rgba(255,255,255,.03),
+        transparent 70%
+    );
+
+    bottom:-120px;
+
+    left:-100px;
+
+    pointer-events:none;
+
+}
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media(max-width:1400px){
 
 .statsGrid{
 
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:768px){
-
-.stats{
-
-padding:90px 6%;
-
-}
-
-.statsHeading h2{
-
-font-size:42px;
-
-}
-
-.statsHeading p{
-
-font-size:16px;
+    gap:26px;
 
 }
 
 .statCard{
 
-padding:40px 20px;
-
-}
-
-.statCard h3{
-
-font-size:50px;
+    padding:38px 26px;
 
 }
 
 }
 
-@media(max-width:576px){
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media(max-width:1200px){
+
+.stats{
+
+    padding:120px 6%;
+
+}
 
 .statsGrid{
 
-grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.statsHeading{
+
+    margin-bottom:70px;
+
+}
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:992px){
+
+.stats{
+
+    padding:100px 6%;
 
 }
 
 .statsHeading h2{
 
-font-size:34px;
+    font-size:clamp(2.5rem,5vw,3.8rem);
+
+}
+
+.statsHeading p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.statCard{
+
+    padding:34px 24px;
+
+}
+
+.statIcon{
+
+    width:72px;
+
+    height:72px;
 
 }
 
 .statCard h3{
 
-font-size:44px;
+    font-size:3rem;
+
+}
+
+.statCard h4{
+
+    font-size:1.3rem;
+
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.stats{
+
+    padding:90px 6%;
+
+}
+
+.statsHeading{
+
+    margin-bottom:55px;
+
+}
+
+.statsHeading h2{
+
+    font-size:2.4rem;
+
+}
+
+.statsGrid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.statCard{
+
+    padding:30px 22px;
+
+}
+
+.statIcon{
+
+    width:68px;
+
+    height:68px;
+
+    margin-bottom:22px;
+
+}
+
+.statCard h3{
+
+    font-size:2.8rem;
+
+}
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+.stats{
+
+    padding:80px 5%;
+
+}
+
+.statsHeading{
+
+    margin-bottom:45px;
+
+}
+
+.statsHeading h2{
+
+    font-size:2rem;
+
+}
+
+.statsHeading p{
+
+    font-size:.95rem;
+
+}
+
+.statCard{
+
+    padding:26px 20px;
+
+    border-radius:22px;
+
+}
+
+.statIcon{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.statCard h3{
+
+    font-size:2.5rem;
+
+}
+
+.statCard h4{
+
+    font-size:1.15rem;
 
 }
 
 .statCard p{
 
-font-size:16px;
+    font-size:.95rem;
 
 }
+
+}
+
+/* =====================================================
+   EXTRA LARGE DESKTOP
+===================================================== */
+
+@media(min-width:1600px){
+
+.statsGrid{
+
+    gap:36px;
+
+}
+
+.statCard{
+
+    padding:50px 36px;
+
+}
+
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.statCard:focus-within{
+
+    outline:2px solid rgba(212,175,55,.5);
+
+    outline-offset:6px;
+
+}
+
+/* =====================================================
+   SMOOTH TRANSITIONS
+===================================================== */
+
+.statCard,
+.statIcon{
+
+    transition:all .35s ease;
 
 }
