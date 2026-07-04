@@ -1,0 +1,362 @@
+/* ===========================================
+   ONGOING PROJECTS
+=========================================== */
+
+.ongoing{
+    padding:140px 8%;
+    background:#0B1220;
+}
+
+.ongoingContainer{
+    max-width:1450px;
+    margin:auto;
+}
+
+/* ===========================================
+   HEADING
+=========================================== */
+
+.ongoingHeading{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 90px;
+}
+
+.ongoingHeading span{
+    color:#D4AF37;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.ongoingHeading h2{
+    color:#fff;
+    font-size:64px;
+    line-height:1.1;
+    margin:22px 0;
+    font-weight:700;
+}
+
+.ongoingHeading p{
+    color:#CBD5E1;
+    font-size:19px;
+    line-height:1.9;
+    max-width:760px;
+    margin:auto;
+}
+
+/* ===========================================
+   PROJECT LIST
+=========================================== */
+
+.projectsList{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+/* ===========================================
+   PROJECT ROW
+=========================================== */
+
+.projectRow{
+
+    display:flex;
+    align-items:center;
+
+    gap:55px;
+
+    padding:45px;
+
+    background:#111827;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.projectRow:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+}
+
+/* ===========================================
+   NUMBER
+=========================================== */
+
+.projectNumber{
+
+    font-size:90px;
+
+    font-weight:800;
+
+    color:#D4AF37;
+
+    min-width:110px;
+
+    text-align:center;
+
+    line-height:1;
+
+    opacity:.95;
+
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.projectContent{
+
+    flex:1;
+
+}
+
+.statusBadge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(46,204,113,.15);
+
+    color:#58D68D;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+    letter-spacing:.5px;
+
+}
+
+.projectContent h3{
+
+    color:white;
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+/* ===========================================
+   LOCATION
+=========================================== */
+
+.location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.location svg{
+
+    color:#D4AF37;
+
+}
+
+/* ===========================================
+   META INFO
+=========================================== */
+
+.projectMeta{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:28px;
+
+}
+
+.projectMeta small{
+
+    color:#94A3B8;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.projectMeta h4{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-top:10px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.projectRow{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:30px;
+
+padding:35px;
+
+}
+
+.projectNumber{
+
+font-size:70px;
+
+min-width:auto;
+
+}
+
+.projectMeta{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.ongoingHeading h2{
+
+font-size:48px;
+
+}
+
+.projectContent h3{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ongoing{
+
+padding:90px 6%;
+
+}
+
+.ongoingHeading h2{
+
+font-size:38px;
+
+}
+
+.ongoingHeading p{
+
+font-size:17px;
+
+}
+
+.projectContent h3{
+
+font-size:26px;
+
+}
+
+.location{
+
+font-size:16px;
+
+}
+
+.projectMeta h4{
+
+font-size:19px;
+
+}
+
+.projectRow{
+
+padding:28px;
+
+}
+
+.projectNumber{
+
+font-size:58px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.ongoingHeading h2{
+
+font-size:32px;
+
+}
+
+.ongoingHeading p{
+
+font-size:15px;
+
+}
+
+.projectContent h3{
+
+font-size:22px;
+
+}
+
+.projectNumber{
+
+font-size:48px;
+
+}
+
+.statusBadge{
+
+font-size:12px;
+
+padding:7px 14px;
+
+}
+
+}

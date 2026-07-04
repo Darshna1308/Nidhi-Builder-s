@@ -1,0 +1,283 @@
+/* ===================================================
+   NAVBAR
+=================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    transition:all .4s ease;
+}
+
+/* Scroll Effect */
+
+.navbar.scrolled{
+    background:rgba(8,17,31,.88);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+}
+
+/* ===================================================
+   LOGO
+=================================================== */
+
+.logo{
+    text-decoration:none;
+}
+
+.logoBox{
+
+    background:#ffffff;
+
+    padding:10px 18px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.15);
+
+    transition:.35s;
+}
+
+.logoBox:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.22);
+
+}
+
+.logoBox img{
+
+    height:52px;
+
+    width:auto;
+
+    display:block;
+
+}
+
+/* ===================================================
+   NAV LINKS
+=================================================== */
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+.nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#D4AF37;
+
+    transition:.35s;
+
+}
+
+.nav a:hover{
+
+    color:#D4AF37;
+
+}
+
+.nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================================
+   QUOTE BUTTON
+=================================================== */
+
+.quoteBtn{
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:#D4AF37;
+
+    color:#111827 !important;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.quoteBtn::after{
+
+    display:none;
+
+}
+
+.quoteBtn:hover{
+
+    background:#e6bf48;
+
+    color:#111827 !important;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 35px rgba(212,175,55,.35);
+
+}
+
+/* ===================================================
+   MENU ICON
+=================================================== */
+
+.menuIcon{
+
+    display:none;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* ===================================================
+   MOBILE
+=================================================== */
+
+@media(max-width:992px){
+
+.menuIcon{
+
+display:block;
+
+z-index:1001;
+
+}
+
+.nav{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:300px;
+
+height:100vh;
+
+background:#08111F;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:32px;
+
+transition:.4s;
+
+box-shadow:-10px 0 40px rgba(0,0,0,.25);
+
+}
+
+.nav.active{
+
+right:0;
+
+}
+
+.logoBox img{
+
+height:44px;
+
+}
+
+}
+
+/* ===================================================
+   SMALL DEVICES
+=================================================== */
+
+@media(max-width:576px){
+
+.navbar{
+
+padding:15px 5%;
+
+}
+
+.logoBox{
+
+padding:8px 14px;
+
+}
+
+.logoBox img{
+
+height:38px;
+
+}
+
+.quoteBtn{
+
+padding:12px 22px;
+
+font-size:14px;
+
+}
+
+}

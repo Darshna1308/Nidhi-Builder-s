@@ -1,0 +1,200 @@
+/* ===========================================
+   STATS SECTION
+=========================================== */
+
+.stats{
+    padding:120px 8%;
+    background:#08111F;
+    position:relative;
+    overflow:hidden;
+}
+
+.statsContainer{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.statsHeading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.statsHeading .sectionTag{
+    color:#D4AF37;
+    font-size:14px;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.statsHeading h2{
+    margin:20px 0;
+    font-size:56px;
+    line-height:1.15;
+    color:#fff;
+}
+
+.statsHeading p{
+    max-width:760px;
+    margin:auto;
+    color:#CBD5E1;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.statsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.statCard{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    padding:50px 25px;
+
+    text-align:center;
+
+    transition:.4s ease;
+
+}
+
+.statCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 25px 60px rgba(212,175,55,.15);
+
+}
+
+/* ===========================
+   Number
+=========================== */
+
+.statCard h3{
+
+    font-size:64px;
+
+    color:#D4AF37;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.statCard p{
+
+    color:#E2E8F0;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+.statsGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.stats{
+
+padding:90px 6%;
+
+}
+
+.statsHeading h2{
+
+font-size:42px;
+
+}
+
+.statsHeading p{
+
+font-size:16px;
+
+}
+
+.statCard{
+
+padding:40px 20px;
+
+}
+
+.statCard h3{
+
+font-size:50px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.statsGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.statsHeading h2{
+
+font-size:34px;
+
+}
+
+.statCard h3{
+
+font-size:44px;
+
+}
+
+.statCard p{
+
+font-size:16px;
+
+}
+
+}

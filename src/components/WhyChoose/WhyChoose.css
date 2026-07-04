@@ -1,0 +1,89 @@
+.whyChoose{
+padding:120px 8%;
+background:#ffffff;
+}
+
+.whyHeading{
+text-align:center;
+max-width:800px;
+margin:auto;
+margin-bottom:70px;
+}
+
+.whyHeading span{
+color:#D4AF37;
+font-size:14px;
+font-weight:700;
+letter-spacing:3px;
+}
+
+.whyHeading h2{
+font-size:58px;
+color:#111827;
+margin-top:20px;
+line-height:1.15;
+}
+
+.whyGrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+max-width:1400px;
+margin:auto;
+}
+
+.whyCard{
+background:#f8f8f8;
+padding:35px;
+border-radius:22px;
+transition:.35s;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.whyCard:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.whyIcon{
+width:65px;
+height:65px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#111827;
+margin-bottom:22px;
+}
+
+.whyCard h3{
+font-size:28px;
+color:#111827;
+margin-bottom:15px;
+}
+
+.whyCard p{
+color:#666;
+line-height:1.8;
+}
+
+@media(max-width:992px){
+
+.whyGrid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.whyGrid{
+grid-template-columns:1fr;
+}
+
+.whyHeading h2{
+font-size:42px;
+}
+
+}
