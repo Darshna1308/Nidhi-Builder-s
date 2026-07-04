@@ -60,19 +60,19 @@ function Contact() {
                 Select Your Project
               </option>
 
-              <option>🏡 Luxury Residential Home</option>
+              <option> Luxury Residential Home</option>
 
-              <option>🏢 Commercial Building</option>
+              <option> Commercial Building</option>
 
-              <option>🏗️ Industrial Project</option>
+              <option> Industrial Project</option>
 
-              <option>🛠️ Renovation & Redevelopment</option>
+              <option> Renovation & Redevelopment</option>
 
-              <option>🔑 Turnkey Construction</option>
+              <option> Turnkey Construction</option>
 
-              <option>🌿 Farmhouse / Villa</option>
+              <option> Farmhouse / Villa</option>
 
-              <option>✨ I Have My Own Vision (Let's Discuss)</option>
+              <option> I Have My Own Vision (Let's Discuss)</option>
 
             </select>
 
