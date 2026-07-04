@@ -23,21 +23,15 @@ function Navbar() {
 
   return (
     <header className={scrolled ? "navbar scrolled" : "navbar"}>
-      
-      {/* ================= Logo ================= */}
 
       <a href="#home" className="logo">
-
         <div className="logoBox">
           <img
             src={logo}
             alt="Nidhi Builders Logo"
           />
         </div>
-
       </a>
-
-      {/* ================= Navigation ================= */}
 
       <nav className={menuOpen ? "nav active" : "nav"}>
 
@@ -74,8 +68,6 @@ function Navbar() {
         </a>
 
       </nav>
-
-      {/* ================= Mobile Menu ================= */}
 
       <div
         className="menuIcon"

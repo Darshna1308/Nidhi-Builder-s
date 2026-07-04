@@ -33,7 +33,10 @@ function HomeShowcase() {
           </h2>
 
           <p>
-           Take a virtual walkthrough of one of our completed homes and discover the quality, attention to detail, thoughtful planning and premium finishes that define every Nidhi Builders project.
+            Step inside one of our completed residences through an immersive
+            walkthrough. Every corner reflects thoughtful planning, premium
+            craftsmanship and the uncompromising quality that defines every
+            Nidhi Builders project.
           </p>
 
           <div className="features">
@@ -57,7 +60,7 @@ function HomeShowcase() {
 
         </motion.div>
 
-        {/* RIGHT VIDEO */}
+        {/* RIGHT */}
 
         <motion.div
           className="showcaseVideo"
@@ -70,17 +73,17 @@ function HomeShowcase() {
           <div className="videoWrapper">
 
             <iframe
-              src="https://www.youtube.com/embed/yie77LrPEZw?autoplay=0&rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/yie77LrPEZw?rel=0&modestbranding=1"
               title="Nidhi Builders Home Walkthrough"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            />
 
           </div>
 
           <p className="videoCaption">
-  Watch a real walkthrough of one of our completed residential projects.
-</p>
+            Watch a walkthrough of one of our completed luxury residences.
+          </p>
 
         </motion.div>
 

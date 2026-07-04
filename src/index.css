@@ -1,0 +1,28 @@
+/* ==============================
+   RESPONSIVE DESIGN SYSTEM
+============================== */
+
+:root{
+
+  /* Container */
+
+  --container: min(92%, 1400px);
+
+  /* Typography */
+
+  --fs-display: clamp(2.6rem, 5vw, 5rem);
+  --fs-h1: clamp(2.3rem, 4vw, 4rem);
+  --fs-h2: clamp(2rem, 3vw, 3.4rem);
+  --fs-h3: clamp(1.4rem, 2vw, 2rem);
+
+  --fs-body: clamp(1rem, 1.1vw, 1.15rem);
+  --fs-small: clamp(.9rem,.9vw,1rem);
+
+  /* Spacing */
+
+  --section-padding: clamp(80px,8vw,130px);
+  --gap-lg: clamp(40px,5vw,70px);
+  --gap-md: clamp(20px,3vw,35px);
+  --gap-sm: 18px;
+
+}

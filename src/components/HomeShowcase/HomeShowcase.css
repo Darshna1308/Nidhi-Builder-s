@@ -1,112 +1,154 @@
-/* ===========================================
+/* =====================================================
    HOME SHOWCASE
-=========================================== */
+===================================================== */
 
 .homeShowcase{
-    padding:130px 8%;
+
     background:#081220;
+
+    padding:var(--section-padding) 8%;
+
 }
 
 .showcaseContainer{
-    max-width:1450px;
+
+    width:var(--container);
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:1fr 1.1fr;
-    gap:70px;
+
+    grid-template-columns:1fr 0.9fr;
+
+    gap:clamp(45px,6vw,90px);
+
     align-items:center;
+
 }
 
-/* ===========================================
+/* =====================================================
    LEFT CONTENT
-=========================================== */
+===================================================== */
 
 .sectionLabel{
+
     display:inline-block;
+
     color:#D4AF37;
+
     letter-spacing:4px;
-    font-size:14px;
+
+    font-size:var(--fs-small);
+
     font-weight:700;
+
     margin-bottom:18px;
+
 }
 
 .showcaseContent h2{
-    color:#fff;
-    font-size:58px;
+
+    color:white;
+
+    font-size:var(--fs-h1);
+
     line-height:1.1;
+
     margin-bottom:25px;
+
 }
 
 .showcaseContent p{
+
     color:#CBD5E1;
-    font-size:18px;
+
+    font-size:var(--fs-body);
+
     line-height:1.9;
-    margin-bottom:45px;
+
+    margin-bottom:40px;
+
 }
 
-/* ===========================================
+/* =====================================================
    FEATURES
-=========================================== */
+===================================================== */
 
 .features{
+
     display:flex;
+
     flex-direction:column;
+
     gap:22px;
+
 }
 
 .featureItem{
+
     display:flex;
+
     align-items:center;
-    gap:18px;
-    color:#fff;
-    font-size:18px;
-    font-weight:500;
+
+    gap:16px;
+
+    color:white;
+
+    font-size:var(--fs-body);
+
 }
 
 .featureItem svg{
+
     color:#D4AF37;
-    min-width:24px;
+
+    flex-shrink:0;
+
 }
 
-/* ===========================================
+/* =====================================================
    VIDEO
-=========================================== */
-
-/* ===========================================
-   VIDEO
-=========================================== */
+===================================================== */
 
 .showcaseVideo{
+
     display:flex;
-    justify-content:center;
+
+    flex-direction:column;
+
     align-items:center;
+
 }
 
 .videoWrapper{
 
-    width:360px;
-    height:720px;
+    width:min(360px,100%);
+
+    aspect-ratio:9/18;
 
     background:#111827;
 
     padding:14px;
 
-    border-radius:42px;
+    border-radius:40px;
 
-    border:3px solid #2d3748;
+    border:2px solid rgba(255,255,255,.12);
 
-    box-shadow:
-        0 35px 80px rgba(0,0,0,.55),
-        0 0 0 2px rgba(212,175,55,.12);
+    overflow:hidden;
 
     position:relative;
 
     transition:.4s;
 
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.40),
+        0 0 45px rgba(212,175,55,.12);
+
 }
 
 .videoWrapper:hover{
 
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-8px) scale(1.02);
 
 }
 
@@ -116,21 +158,21 @@
 
     position:absolute;
 
-    width:120px;
+    width:110px;
 
-    height:8px;
+    height:7px;
 
     background:#2d3748;
 
-    border-radius:20px;
-
     left:50%;
-
-    transform:translateX(-50%);
 
     top:12px;
 
-    z-index:10;
+    transform:translateX(-50%);
+
+    border-radius:20px;
+
+    z-index:5;
 
 }
 
@@ -142,112 +184,100 @@
 
     border:none;
 
-    border-radius:30px;
+    border-radius:28px;
 
 }
 
-/* ===========================================
-   RESPONSIVE
-=========================================== */
+.videoCaption{
 
-@media(max-width:1100px){
+    margin-top:22px;
+
+    color:#CBD5E1;
+
+    font-size:var(--fs-small);
+
+    text-align:center;
+
+    max-width:330px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:992px){
 
 .showcaseContainer{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
-gap:55px;
-
-}
-
-.showcaseContent{
-
-text-align:center;
+    text-align:center;
 
 }
 
 .features{
 
-align-items:center;
+    align-items:center;
 
 }
 
-.showcaseContent h2{
+.showcaseVideo{
 
-font-size:46px;
+    margin-top:20px;
+
+}
 
 }
 
-}
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:768px){
 
 .homeShowcase{
 
-padding:90px 6%;
-
-}
-
-.showcaseContent h2{
-
-font-size:36px;
-
-}
-
-.showcaseContent p{
-
-font-size:16px;
-
-}
-
-.featureItem{
-
-font-size:16px;
-
-justify-content:center;
+    padding:90px 6%;
 
 }
 
 .videoWrapper{
 
-border-radius:20px;
+    width:320px;
 
 }
 
 }
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
 @media(max-width:480px){
 
 .homeShowcase{
 
-padding:70px 5%;
+    padding:70px 5%;
 
 }
 
-.showcaseContent h2{
+.videoWrapper{
 
-font-size:30px;
+    width:100%;
 
-}
+    max-width:300px;
 
-.showcaseContent p{
-
-font-size:15px;
+    border-radius:30px;
 
 }
 
-.featureItem{
+.videoWrapper iframe{
 
-font-size:15px;
-
-}
+    border-radius:22px;
 
 }
 
-.videoCaption{
-    color:#CBD5E1;
-    text-align:center;
-    margin-top:20px;
-    font-size:16px;
-    line-height:1.7;
 }

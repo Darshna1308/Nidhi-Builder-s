@@ -5,16 +5,15 @@
 .hero{
     position:relative;
     width:100%;
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
     display:flex;
     align-items:center;
-    justify-content:center;
+    overflow:hidden;
     background:#08111F;
 }
 
 /* =====================================================
-   BACKGROUND IMAGE
+   BACKGROUND
 ===================================================== */
 
 .heroBackground{
@@ -23,48 +22,49 @@
     width:100%;
     height:100%;
     object-fit:cover;
-    animation:heroZoom 20s ease-in-out infinite alternate;
+    animation:heroZoom 18s ease-in-out infinite alternate;
 }
-
-/* =====================================================
-   DARK OVERLAY
-===================================================== */
 
 .heroOverlay{
     position:absolute;
     inset:0;
-
     background:
-    linear-gradient(
-        90deg,
-        rgba(7,12,22,.88) 0%,
-        rgba(7,12,22,.70) 35%,
-        rgba(7,12,22,.45) 65%,
-        rgba(7,12,22,.30) 100%
-    );
-
+        linear-gradient(
+            90deg,
+            rgba(7,12,22,.88) 0%,
+            rgba(7,12,22,.72) 35%,
+            rgba(7,12,22,.45) 65%,
+            rgba(7,12,22,.25) 100%
+        );
     z-index:1;
 }
 
 /* =====================================================
-   CONTENT
+   CONTAINER
 ===================================================== */
 
 .heroContainer{
+
     position:relative;
     z-index:2;
 
-    width:100%;
-    max-width:1400px;
+    width:var(--container);
 
     margin:auto;
 
-    padding:140px 8% 80px;
+    padding:140px 0 90px;
+
 }
 
 .heroContent{
-    max-width:720px;
+
+    max-width:760px;
+
 }
+
+/* =====================================================
+   TAG
+===================================================== */
 
 .heroTag{
 
@@ -74,41 +74,54 @@
 
     letter-spacing:4px;
 
-    font-size:14px;
+    font-size:var(--fs-small);
 
     font-weight:700;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
+
 }
+
+/* =====================================================
+   HEADING
+===================================================== */
 
 .heroContent h1{
 
-    font-size:78px;
+    font-size:var(--fs-display);
 
     line-height:1.05;
 
-    color:white;
+    color:#fff;
 
     font-weight:700;
 
     margin-bottom:28px;
+
 }
 
 .heroContent h1 span{
+
     color:#D4AF37;
+
 }
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .heroContent p{
 
     color:#D6DCE7;
 
-    font-size:19px;
+    font-size:var(--fs-body);
 
-    line-height:1.9;
+    line-height:1.85;
 
-    max-width:620px;
+    max-width:650px;
 
     margin-bottom:45px;
+
 }
 
 /* =====================================================
@@ -119,65 +132,73 @@
 
     display:flex;
 
-    gap:20px;
-
     flex-wrap:wrap;
 
-    margin-bottom:60px;
+    gap:18px;
+
+    margin-bottom:55px;
+
 }
 
-.primaryBtn{
+.primaryBtn,
+.secondaryBtn{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
+    justify-content:center;
+
     gap:10px;
 
-    padding:17px 34px;
+    padding:16px 30px;
+
+    border-radius:60px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    white-space:nowrap;
+
+}
+
+.primaryBtn{
 
     background:#D4AF37;
 
     color:#111827;
 
-    text-decoration:none;
-
-    font-weight:700;
-
-    border-radius:60px;
-
-    transition:.35s;
 }
 
 .primaryBtn:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
     box-shadow:0 18px 40px rgba(212,175,55,.35);
+
 }
 
 .secondaryBtn{
 
-    padding:17px 34px;
-
-    border-radius:60px;
+    color:#fff;
 
     border:1px solid rgba(255,255,255,.25);
 
-    color:white;
+    backdrop-filter:blur(10px);
 
-    text-decoration:none;
-
-    transition:.35s;
-
-    backdrop-filter:blur(12px);
 }
 
 .secondaryBtn:hover{
 
-    background:white;
+    background:#fff;
 
     color:#111827;
+
 }
 
 /* =====================================================
@@ -188,25 +209,36 @@
 
     display:flex;
 
-    gap:60px;
-
     flex-wrap:wrap;
+
+    gap:45px;
+
+}
+
+.heroStats div{
+
+    min-width:140px;
+
 }
 
 .heroStats h2{
 
     color:#D4AF37;
 
-    font-size:42px;
+    font-size:clamp(2rem,3vw,2.7rem);
 
-    margin-bottom:8px;
+    margin-bottom:6px;
+
 }
 
 .heroStats span{
 
     color:#CBD5E1;
 
-    font-size:15px;
+    font-size:0.95rem;
+
+    line-height:1.5;
+
 }
 
 /* =====================================================
@@ -219,19 +251,20 @@
 
     left:50%;
 
-    bottom:35px;
+    bottom:25px;
 
     transform:translateX(-50%);
 
-    color:white;
+    color:#fff;
 
     z-index:5;
 
     animation:bounce 2s infinite;
+
 }
 
 /* =====================================================
-   ANIMATIONS
+   ANIMATION
 ===================================================== */
 
 @keyframes heroZoom{
@@ -260,37 +293,47 @@
 
     40%{
 
-        transform:translate(-50%,-12px);
+        transform:translate(-50%,-10px);
 
     }
 
     60%{
 
-        transform:translate(-50%,-6px);
+        transform:translate(-50%,-5px);
 
     }
 
 }
 
 /* =====================================================
-   RESPONSIVE
+   LARGE LAPTOPS
 ===================================================== */
 
-@media(max-width:1200px){
-
-.heroContent h1{
-
-    font-size:64px;
-
-}
-
-}
-
-@media(max-width:992px){
+@media (max-width:1400px){
 
 .heroContainer{
 
-    padding:130px 7% 80px;
+    width:min(92%,1200px);
+
+}
+
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width:1024px){
+
+.hero{
+
+    min-height:auto;
+
+}
+
+.heroContainer{
+
+    padding:120px 0 80px;
 
 }
 
@@ -300,45 +343,29 @@
 
 }
 
-.heroContent h1{
-
-    font-size:54px;
-
-}
-
-.heroContent p{
-
-    font-size:17px;
-
-}
-
 .heroStats{
 
-    gap:35px;
+    gap:30px;
 
 }
 
 }
 
-@media(max-width:768px){
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:768px){
 
 .hero{
 
-    height:auto;
-
-    min-height:100vh;
+    min-height:auto;
 
 }
 
 .heroContainer{
 
-    padding:120px 6% 70px;
-
-}
-
-.heroContent h1{
-
-    font-size:42px;
+    padding:110px 0 70px;
 
 }
 
@@ -351,8 +378,6 @@
 .primaryBtn,
 .secondaryBtn{
 
-    justify-content:center;
-
     width:100%;
 
 }
@@ -361,27 +386,45 @@
 
     justify-content:space-between;
 
-}
-
-.heroStats h2{
-
-    font-size:34px;
+    gap:25px;
 
 }
 
+.heroStats div{
+
+    flex:1 1 45%;
+
 }
 
-@media(max-width:480px){
+.scrollDown{
 
-.heroContent h1{
+    display:none;
 
-    font-size:34px;
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+.heroContainer{
+
+    padding:100px 0 60px;
+
+}
+
+.heroTag{
+
+    letter-spacing:2px;
 
 }
 
 .heroContent p{
 
-    font-size:16px;
+    margin-bottom:35px;
 
 }
 
@@ -389,7 +432,22 @@
 
     flex-direction:column;
 
-    gap:25px;
+    gap:20px;
+
+}
+
+.heroStats div{
+
+    min-width:100%;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+    padding:15px 24px;
+
+    font-size:.95rem;
 
 }
 
