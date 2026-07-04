@@ -57,24 +57,28 @@ function Contact() {
 
             <select defaultValue="">
               <option value="" disabled>
-                Select Project Type
+                Select Your Project
               </option>
 
-              <option>Residential Construction</option>
+              <option>🏡 Luxury Residential Home</option>
 
-              <option>Commercial Construction</option>
+              <option>🏢 Commercial Building</option>
 
-              <option>Interior Design</option>
+              <option>🏗️ Industrial Project</option>
 
-              <option>Renovation</option>
+              <option>🛠️ Renovation & Redevelopment</option>
 
-              <option>Turnkey Project</option>
+              <option>🔑 Turnkey Construction</option>
+
+              <option>🌿 Farmhouse / Villa</option>
+
+              <option>✨ I Have My Own Vision (Let's Discuss)</option>
 
             </select>
 
             <textarea
               rows="6"
-              placeholder="Tell us about your project..."
+              placeholder="Tell us about your dream project..."
             ></textarea>
 
             <button type="submit">
