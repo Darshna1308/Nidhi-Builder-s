@@ -5,17 +5,14 @@ import {
   Phone,
   Mail,
   MessageCircle,
-  Clock3,
-  ArrowRight,
 } from "lucide-react";
 
 function Contact() {
   return (
     <section className="contact" id="contact">
-
       <div className="contactContainer">
 
-        {/* ================= LEFT ================= */}
+        {/* LEFT SIDE */}
 
         <motion.div
           className="contactLeft"
@@ -24,42 +21,34 @@ function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-
           <span className="sectionTag">
-            CONTACT NIDHI BUILDERS
+            CONTACT US
           </span>
 
           <h2>
             Let's Build Your
             <br />
-            <span>Dream Project Together</span>
+            Dream Project.
           </h2>
 
           <p>
-            Whether you're planning a luxury residence,
-            commercial building, renovation or turnkey
-            construction project, our experienced team is
-            ready to bring your vision to life with
-            exceptional quality and complete transparency.
+            Whether you're planning a luxurious residence,
+            commercial building, renovation, or turnkey
+            construction project, our team is ready to
+            transform your vision into reality.
           </p>
 
           <form className="contactForm">
 
-            <div className="inputRow">
+            <input
+              type="text"
+              placeholder="Your Name"
+            />
 
-              <input
-                type="text"
-                placeholder="Your Name"
-                required
-              />
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                required
-              />
-
-            </div>
+            <input
+              type="tel"
+              placeholder="Phone Number"
+            />
 
             <input
               type="email"
@@ -71,40 +60,31 @@ function Contact() {
                 Select Project Type
               </option>
 
-              <option>Luxury Residence</option>
+              <option>Residential Construction</option>
 
-              <option>Commercial Building</option>
+              <option>Commercial Construction</option>
 
-              <option>Turnkey Construction</option>
+              <option>Interior Design</option>
 
               <option>Renovation</option>
 
-              <option>Redevelopment</option>
-
-              <option>Plot Development</option>
-
-              <option>Other</option>
+              <option>Turnkey Project</option>
 
             </select>
 
             <textarea
               rows="6"
               placeholder="Tell us about your project..."
-            />
+            ></textarea>
 
             <button type="submit">
-
-              Request Free Consultation
-
-              <ArrowRight size={18} />
-
+              Request Consultation
             </button>
 
           </form>
-
         </motion.div>
 
-        {/* ================= RIGHT ================= */}
+        {/* RIGHT SIDE */}
 
         <motion.div
           className="contactRight"
@@ -116,87 +96,30 @@ function Contact() {
 
           <div className="contactCard">
 
-            <h3>
-              Contact Information
-            </h3>
+            <h3>Contact Information</h3>
 
             <div className="contactItem">
-
-              <div className="contactIcon">
-
-                <MapPin size={22} />
-
-              </div>
-
+              <MapPin size={22} />
               <div>
-
-                <h4>Office Address</h4>
-
-                <p>
-                  Jodhpur,
-                  Rajasthan, India
-                </p>
-
+                <h4>Office</h4>
+                <p>Jodhpur, Rajasthan</p>
               </div>
-
             </div>
 
             <div className="contactItem">
-
-              <div className="contactIcon">
-
-                <Phone size={22} />
-
-              </div>
-
+              <Phone size={22} />
               <div>
-
-                <h4>Phone Number</h4>
-
-                <p>+91 93147 14978</p>
-
+                <h4>Phone</h4>
+                <p>+91 9314714978</p>
               </div>
-
             </div>
 
             <div className="contactItem">
-
-              <div className="contactIcon">
-
-                <Mail size={22} />
-
-              </div>
-
+              <Mail size={22} />
               <div>
-
-                <h4>Email Address</h4>
-
+                <h4>Email</h4>
                 <p>maheshparihar271@gmail.com</p>
-
               </div>
-
-            </div>
-
-            <div className="contactItem">
-
-              <div className="contactIcon">
-
-                <Clock3 size={22} />
-
-              </div>
-
-              <div>
-
-                <h4>Working Hours</h4>
-
-                <p>
-                  Monday – Saturday
-                  <br />
-                  9:00 AM – 6:00 PM
-                </p>
-
-              </div>
-
             </div>
 
             <a
@@ -205,19 +128,25 @@ function Contact() {
               rel="noopener noreferrer"
               className="whatsappCard"
             >
-
               <MessageCircle size={22} />
-
               Chat on WhatsApp
-
             </a>
+
+          </div>
+
+          <div className="workingHours">
+
+            <h3>Working Hours</h3>
+
+            <p>Monday – Saturday</p>
+
+            <span>9:00 AM – 6:00 PM</span>
 
           </div>
 
         </motion.div>
 
       </div>
-
     </section>
   );
 }

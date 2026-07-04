@@ -1,293 +1,353 @@
-/* =====================================================
+/* ===================================================
    CONTACT SECTION
-===================================================== */
+=================================================== */
 
 .contact{
-    padding:var(--section-padding) 8%;
+    padding:120px 8%;
     background:#F8FAFC;
 }
 
 .contactContainer{
-    width:var(--container);
+    max-width:1400px;
     margin:auto;
     display:grid;
     grid-template-columns:1.1fr .9fr;
-    gap:clamp(50px,6vw,90px);
+    gap:70px;
     align-items:start;
 }
 
-/* =====================================================
-   LEFT CONTENT
-===================================================== */
+/* ===================================================
+   LEFT
+=================================================== */
 
-.contactLeft .sectionTag{
-    display:inline-block;
+.sectionTag{
     color:#D4AF37;
-    letter-spacing:4px;
-    font-size:var(--fs-small);
+    letter-spacing:3px;
+    font-size:14px;
     font-weight:700;
-    margin-bottom:18px;
 }
 
 .contactLeft h2{
+    font-size:58px;
+    line-height:1.1;
     color:#111827;
-    font-size:var(--fs-h1);
-    line-height:1.08;
-    margin-bottom:24px;
+    margin:20px 0;
 }
 
 .contactLeft p{
-    color:#64748B;
-    font-size:var(--fs-body);
+    font-size:18px;
     line-height:1.9;
-    max-width:640px;
+    color:#64748B;
     margin-bottom:40px;
+    max-width:650px;
 }
 
-/* =====================================================
+/* ===================================================
    FORM
-===================================================== */
+=================================================== */
 
 .contactForm{
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:22px;
 }
 
 .contactForm input,
 .contactForm select,
 .contactForm textarea{
+
     width:100%;
+
     padding:18px 22px;
-    border:1px solid #E5E7EB;
-    border-radius:18px;
-    background:#fff;
-    font-size:1rem;
-    font-family:inherit;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:16px;
+
+    font-size:16px;
+
     outline:none;
-    transition:.35s ease;
+
+    background:white;
+
+    transition:.35s;
+
 }
 
 .contactForm textarea{
+
     resize:none;
-    min-height:170px;
+
 }
 
 .contactForm input:focus,
 .contactForm select:focus,
 .contactForm textarea:focus{
+
     border-color:#D4AF37;
+
     box-shadow:0 0 0 4px rgba(212,175,55,.15);
+
 }
 
 .contactForm button{
-    margin-top:8px;
-    background:#D4AF37;
-    color:#111827;
-    border:none;
-    border-radius:60px;
+
+    margin-top:10px;
+
     padding:18px;
-    font-size:1rem;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#D4AF37;
+
+    color:#111827;
+
+    font-size:16px;
+
     font-weight:700;
+
     cursor:pointer;
+
     transition:.35s;
+
 }
 
 .contactForm button:hover{
+
     transform:translateY(-4px);
-    box-shadow:0 20px 40px rgba(212,175,55,.35);
+
+    box-shadow:0 18px 35px rgba(212,175,55,.35);
+
 }
 
-/* =====================================================
-   RIGHT CONTACT CARD
-===================================================== */
+/* ===================================================
+   RIGHT CARD
+=================================================== */
 
 .contactCard{
+
     background:#08111F;
+
+    color:white;
+
     border-radius:28px;
-    padding:42px;
-    color:#fff;
+
+    padding:45px;
+
     box-shadow:0 25px 60px rgba(0,0,0,.18);
+
 }
 
 .contactCard h3{
-    font-size:clamp(1.8rem,2.2vw,2.3rem);
-    margin-bottom:34px;
+
+    font-size:32px;
+
+    margin-bottom:35px;
+
 }
 
+/* ===================================================
+   ITEMS
+=================================================== */
+
 .contactItem{
+
     display:flex;
-    gap:18px;
-    margin-bottom:28px;
+
     align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
 }
 
 .contactItem svg{
+
     color:#D4AF37;
+
     flex-shrink:0;
+
     margin-top:4px;
+
 }
 
 .contactItem h4{
-    font-size:1.1rem;
+
     margin-bottom:6px;
+
+    font-size:18px;
+
 }
 
 .contactItem p{
+
     color:#CBD5E1;
-    line-height:1.7;
+
+    line-height:1.6;
+
 }
-/* =====================================================
-   WHATSAPP BUTTON
-===================================================== */
+
+/* ===================================================
+   WHATSAPP
+=================================================== */
 
 .whatsappCard{
-    margin-top:18px;
+
+    margin-top:15px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    gap:12px;
+
+    gap:10px;
+
     text-decoration:none;
+
     background:#25D366;
-    color:#fff;
-    padding:18px;
-    border-radius:16px;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:14px;
+
     font-weight:600;
-    transition:.35s ease;
+
+    transition:.35s;
+
 }
 
 .whatsappCard:hover{
-    transform:translateY(-4px);
-    box-shadow:0 18px 40px rgba(37,211,102,.35);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(37,211,102,.35);
+
 }
 
-/* =====================================================
+/* ===================================================
    WORKING HOURS
-===================================================== */
+=================================================== */
 
 .workingHours{
-    margin-top:28px;
-    background:#fff;
+
+    margin-top:35px;
+
+    background:white;
+
     padding:30px;
-    border-radius:24px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
 }
 
 .workingHours h3{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
     color:#111827;
-    font-size:clamp(1.5rem,2vw,2rem);
-    margin-bottom:14px;
+
 }
 
 .workingHours p{
-    color:#64748B;
+
+    color:#555;
+
     margin-bottom:8px;
-    font-size:1rem;
+
 }
 
 .workingHours span{
+
     color:#D4AF37;
+
     font-weight:700;
-    font-size:1.05rem;
+
 }
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* ===================================================
+   RESPONSIVE
+=================================================== */
 
 @media(max-width:992px){
 
-.contact{
-    padding:90px 6%;
-}
-
 .contactContainer{
-    grid-template-columns:1fr;
-    gap:55px;
+
+grid-template-columns:1fr;
+
 }
 
 .contactLeft{
-    text-align:center;
+
+text-align:center;
+
 }
 
 .contactLeft p{
-    margin:0 auto 40px;
-}
 
-.contactCard,
-.workingHours{
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-}
+margin:auto auto 35px;
 
 }
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.contactCard{
+
+margin-top:10px;
+
+}
+
+}
 
 @media(max-width:768px){
 
 .contact{
-    padding:80px 6%;
+
+padding:90px 6%;
+
+}
+
+.contactLeft h2{
+
+font-size:42px;
+
 }
 
 .contactCard{
-    padding:34px;
+
+padding:35px;
+
 }
 
-.workingHours{
-    padding:28px;
+}
+
+@media(max-width:480px){
+
+.contactLeft h2{
+
+font-size:34px;
+
+}
+
+.contactCard{
+
+padding:28px;
+
 }
 
 .contactForm input,
 .contactForm select,
 .contactForm textarea{
-    padding:16px 18px;
-}
 
-.contactForm button{
-    padding:17px;
-}
+padding:15px 18px;
 
-}
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:480px){
-
-.contact{
-    padding:70px 5%;
-}
-
-.contactCard{
-    padding:28px;
-    border-radius:22px;
-}
-
-.workingHours{
-    padding:24px;
-    border-radius:20px;
-}
-
-.contactItem{
-    gap:14px;
-}
-
-.contactCard h3{
-    font-size:1.6rem;
-}
-
-.contactForm textarea{
-    min-height:150px;
-}
-
-.whatsappCard{
-    padding:16px;
-    font-size:.95rem;
 }
 
 }
